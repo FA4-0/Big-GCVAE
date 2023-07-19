@@ -20,3 +20,4 @@ superior performance compared to other transformer models. Specifically, we obse
 interpretable latent representation with high quality generative performance across all scoring
 metrics.
 ```
+![Complete flow](https://github.com/FA4-0/Big-GCVAE/blob/main/biggcvae.png)
