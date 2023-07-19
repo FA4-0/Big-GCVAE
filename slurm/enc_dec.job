@@ -1,0 +1,70 @@
+#!/bin/bash -l
+#SBATCH --job-name=EDEC_1
+#SBATCH --mail-user=ifeanyi.ezukwoke@emse.fr
+#SBATCH --mail-type=ALL
+#SBATCH --gres=gpu:1
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=75G
+#SBATCH --time=7-00:00:00
+#SBATCH --partition=audace2018
+ulimit -l unlimited
+unset SLURM_GTIDS
+
+echo -----------------------------------------------
+echo SLURM_NNODES: $SLURM_NNODES
+echo SLURM_JOB_NODELIST: $SLURM_JOB_NODELIST
+echo SLURM_SUBMIT_DIR: $SLURM_SUBMIT_DIR
+echo SLURM_SUBMIT_HOST: $SLURM_SUBMIT_HOST
+echo SLURM_JOB_ID: $SLURM_JOB_ID
+echo SLURM_JOB_NAME: $SLURM_JOB_NAME
+echo SLURM_JOB_PARTITION: $SLURM_JOB_PARTITION
+echo SLURM_NTASKS: $SLURM_NTASKS
+echo SLURM_TASKS_PER_NODE: $SLURM_TASKS_PER_NODE
+echo SLURM_NTASKS_PER_NODE: $SLURM_NTASKS_PER_NODE
+echo -----------------------------------------------
+echo Run program...
+module purge
+module load gcc/8.1.0
+module load cuda/10.2.89
+module load python/3.7.1
+source meso-env-cuda10.2.89/env.sh
+python pretrainer.py \
+        --model_type_enc bert-base-uncased \
+        --model_name_or_path_enc bert-base-uncased \
+        --model_type_dec gpt2-medium \
+        --model_name_or_path_dec gpt2-medium \
+        --do_train \
+        --max_seq_length 128 \
+        --per_gpu_train_batch_size 1 \
+        --learning_rate 5e-5 \
+        --num_train_epochs 5.0 \
+        --output_dir result/ \
+        --eval_dir evaluation/ \
+        --overwrite_output_dir \
+	--length_weighted_loss \
+        --fp16 \
+        --fp16_opt_level O2 \
+        --gradient_accumulation_steps 1 \
+        --seed 42 \
+        --do_lower_case \
+        --encoder_decoder_sep \
+        --warmup_steps 100 \
+        --logging_steps 100 \
+        --save_steps 100 \
+        --evaluate_during_training \
+        --adam_epsilon 1e-8 \
+        --weight_decay 0.05 \
+        --max_grad_norm 1.0 \
+        --return_token_type_ids \
+        --beta 1.0 \
+        --dim_target_kl 1.0 \
+        --ratio_zero .5 \
+        --ratio_increase .25 \
+	--temperature 1.9 \
+	--top_p 0.95 \
+	--top_k 10 \
+	--num_interpolation_steps 10\
+        --max_steps -1
+echo -----------------------------------------------
