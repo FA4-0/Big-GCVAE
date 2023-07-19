@@ -1,0 +1,2 @@
+   ***** Eval loss results *****
+Evaluation loss: 1.1012213535529918 PPL: 6.498068332672119 KL: 0.0 RECONSTRUCTION: 128.3365448400746
