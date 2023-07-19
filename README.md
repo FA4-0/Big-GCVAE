@@ -1,6 +1,8 @@
 # Big-GCVAE
 Big GCVAE: Probabilistic Graphical BERT-GPT2 Transformer Model for Failure Analysis Triplet Generation
-![Complete flow](https://github.com/FA4-0/Big-GCVAE/blob/main/complete_flow.png)
+![Complete worflow](https://github.com/FA4-0/Big-GCVAE/blob/main/complete_flow.png)
+
+------------------------------
 
 ## Abstract
 
@@ -20,4 +22,58 @@ superior performance compared to other transformer models. Specifically, we obse
 interpretable latent representation with high quality generative performance across all scoring
 metrics.
 ```
-![Complete flow](https://github.com/FA4-0/Big-GCVAE/blob/main/biggcvae.png)
+![Big GCVAE](https://github.com/FA4-0/Big-GCVAE/blob/main/biggcvae.png)
+
+
+------------------------------
+
+## How to use
+
+- Clone repo: ``` https://github.com/FA4-0/Big-GCVAE ```
+- Run training and evaluation on example data using:
+  ```python
+  python pretrainer_gcvae.py \
+        --model_type_enc bert-base-uncased \
+        --model_name_or_path_enc bert-base-uncased \
+        --model_type_dec gpt2-medium \
+        --model_name_or_path_dec gpt2-medium \
+        --do_eval \
+        --max_seq_length 128 \
+        --per_gpu_train_batch_size 1 \
+        --learning_rate 5e-5 \
+        --num_train_epochs 1.0 \
+        --output_dir result/ \
+        --eval_dir evaluation/ \
+        --overwrite_output_dir \
+	       --length_weighted_loss \
+        --fp16 \
+        --fp16_opt_level O2 \
+        --gradient_accumulation_steps 1 \
+        --seed 42 \
+        --do_lower_case \
+        --encoder_decoder_sep \
+        --warmup_steps 100 \
+        --logging_steps 100 \
+        --save_steps 100 \
+        --evaluate_during_training \
+        --adam_epsilon 1e-8 \
+        --weight_decay 0.05 \
+        --max_grad_norm 1.0 \
+        --return_token_type_ids \
+        --dim_target_kl 1.0 \
+        --ratio_zero .5 \
+        --ratio_increase .25 \
+       	--temperature 1.9 \
+       	--top_p 0.95 \
+       	--top_k 10 \
+       	--num_interpolation_steps 1 \
+       	--use_variational_loss \
+       	--vae_model_name gcvae \
+       	--mmd_type mmd \
+        --beta 5.0 \
+        --gamma 500.0 \
+        --init_kld 1 \
+        --init_bce 0.01 \
+        --init_mmd 0.01 \
+        --max_steps -1
+  ```
