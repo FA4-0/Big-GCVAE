@@ -45,7 +45,7 @@ metrics.
         --output_dir result/ \
         --eval_dir evaluation/ \
         --overwrite_output_dir \
-	       --length_weighted_loss \
+	    --length_weighted_loss \
         --fp16 \
         --fp16_opt_level O2 \
         --gradient_accumulation_steps 1 \
