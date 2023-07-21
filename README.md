@@ -29,7 +29,7 @@ metrics.
 
 ## How to use
 
-- Clone repo: ``` https://github.com/FA4-0/Big-GCVAE ```
+- Clone repo: ```git clone https://github.com/FA4-0/Big-GCVAE ```
 - Run ```training``` and ```evaluation``` on example data either using [Bash Slurm file](https://github.com/FA4-0/Big-GCVAE/blob/main/slurm/pretrainer_gcvae.job) on HCP or:
   ```python
   python pretrainer_gcvae.py \
