@@ -83,7 +83,7 @@ metrics.
 
 | Model           | Evaluation | Reconstruction | KL divergence  |
 |-----------------|------------|----------------|----------------|
-|                 |  loss      |  loss          |                |
+|                 |  **loss**      |  **loss**          |                |
 | Big VAE          | **1.10**  | 128.34  | 6.49 |
 |    Big ControlVAE      | 1.18  | 1.10  | 9.85 |
 | Big GCVAE (MMD)  | 1.18  | 1.09  | 8.23 |
