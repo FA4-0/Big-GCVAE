@@ -86,9 +86,11 @@ metrics.
 |                 |  **loss**      |  **loss**          |                |
 | Big VAE          | **1.10**  | 128.34  | 6.49 |
 |    Big ControlVAE      | 1.18  | 1.10  | 9.85 |
-| Big GCVAE (MMD)  | 1.18  | 1.09  | 8.23 |
-| Big GCVAE (MAH) | 1.11  | **1.09**  | 3.80 |
+| Big GCVAE†  | 1.18  | 1.09  | 8.23 |
+|Big GCVAE‡ | 1.11  | **1.09**  | 3.80 |
 
+	Performance evaluation of Big GCVAE models and 	its derivatives. Both Big GCVAE† (Maximum Mean Discrepancy) and 
+ 	Big GCVAE‡ (Squared Mahalanobis) have the lowest reconstruction loss compared to Big VAE (Li et al., 2020).
 
 - ```Evaluation metrics```:
   
@@ -100,3 +102,10 @@ metrics.
 | Big ControlVAE  | 22.25  | 16.38  | 27.10 | 31.55    | 28.89    | 21.54    | 9.58     |
 | Big GCVAE (MMD) | 22.09  | 16.25  | 27.01 | 31.17    | 28.58    | 21.36    | 9.50     |
 | Big GCVAE (MAH) | **22.53**  | **17.00**  | **27.63** | **31.71**    | **29.08**    | **21.79**    | **9.70**    |
+	
+ 	Model comparison on BLEU (Papineni et al., 2002), ROUGE-1 & L (Lin, 2004), METEOR (MET.) (Banerjee
+	and Lavie, 2005) and LESE (Ezukwoke et al., 2022b). Higher values (in bold-blue) is preferred for 
+ 	all metric except Lev-n	(average n-gram Levenshstein distance). Big GCVAE‡ performs better across
+  	all evaluation metric. Observe the approximately 3-point increase in performance of the generative
+   	strength for ROUGE-1 and LESE-1 and a comparable increase for the triplet evaluations
+ 	
