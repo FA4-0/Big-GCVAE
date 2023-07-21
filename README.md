@@ -107,7 +107,7 @@ metrics.
 	and Lavie, 2005) and LESE (Ezukwoke et al., 2022b). Higher values (in bold-blue) is preferred for 
  	all metric except Lev-n	(average n-gram Levenshstein distance). Big GCVAE‡ performs better across
   	all evaluation metric. Observe the approximately 3-point increase in performance of the generative
-   	strength for ROUGE-1 and LESE-1 and a comparable increase for the triplet evaluations
+   	strength for ROUGE-1 and LESE-1 and a comparable increase for the triplet evaluations.
  	
 - ```Latent representation```
   
