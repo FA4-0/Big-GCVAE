@@ -100,8 +100,8 @@ metrics.
 | GPT2-M          | 21.26  | 15.47  | 26.74 | 29.15    | 26.56    | 19.41    | 8.55     |
 | Big VAE         | 21.87  | 16.15  | 26.64 | 31.23    | 28.73    | 21.46    | 9.57     |
 | Big ControlVAE  | 22.25  | 16.38  | 27.10 | 31.55    | 28.89    | 21.54    | 9.58     |
-| Big GCVAE (MMD) | 22.09  | 16.25  | 27.01 | 31.17    | 28.58    | 21.36    | 9.50     |
-| Big GCVAE (MAH) | **22.53**  | **17.00**  | **27.63** | **31.71**    | **29.08**    | **21.79**    | **9.70**    |
+| Big GCVAE† | 22.09  | 16.25  | 27.01 | 31.17    | 28.58    | 21.36    | 9.50     |
+| Big GCVAE‡ | **22.53**  | **17.00**  | **27.63** | **31.71**    | **29.08**    | **21.79**    | **9.70**    |
 	
  	Model comparison on BLEU (Papineni et al., 2002), ROUGE-1 & L (Lin, 2004), METEOR (MET.) (Banerjee
 	and Lavie, 2005) and LESE (Ezukwoke et al., 2022b). Higher values (in bold-blue) is preferred for 
