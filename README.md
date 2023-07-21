@@ -111,8 +111,8 @@ metrics.
  	
 - ```Latent representation```
   
-  ![Latent representation](https://github.com/FA4-0/Big-GCVAE/blob/main/latent_s.png)
-
-  		2D Latent representation space (top) and t-SNE Embedding (bottom). Observe the quality of clusters in the latent
-  		space for Big GCVAE† (best), Big VAE (second best) and Big GCVAE‡ (less fuzzy). The latent space of Big ControlVAE
-  		is the most fuzzy with overlapping cluster of densities in t-SNE Embedding space.
+![Latent representation](https://github.com/FA4-0/Big-GCVAE/blob/main/latent_s.png)
+  
+	2D Latent representation space (top) and t-SNE Embedding (bottom). Observe the quality of clusters in the latent
+	space for Big GCVAE† (best), Big VAE (second best) and Big GCVAE‡ (less fuzzy). The latent space of Big ControlVAE
+	is the most fuzzy with overlapping cluster of densities in t-SNE Embedding space.
