@@ -117,3 +117,8 @@ metrics.
 	2D Latent representation space (top) and t-SNE Embedding (bottom). Observe the quality of clusters in the latent
 	space for Big GCVAE† (best), Big VAE (second best) and Big GCVAE‡ (less fuzzy). The latent space of Big ControlVAE
 	is the most fuzzy with overlapping cluster of densities in t-SNE Embedding space.
+
+## Citation
+- ```Under Review``` @ ```Journal of Intelligent Manufacturing (JIM)```
+
+
