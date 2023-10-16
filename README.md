@@ -119,6 +119,6 @@ metrics.
 	is the most fuzzy with overlapping cluster of densities in t-SNE Embedding space.
 
 ## Citation
-- ```Under Review``` @ ```Journal of Intelligent Manufacturing (JIM)```
+- ```Under Acceptance consideration``` @ ```Journal of Intelligent Manufacturing (JIM)```
 
 
