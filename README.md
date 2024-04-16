@@ -1,5 +1,5 @@
 # Big-GCVAE
-### Big GCVAE: Probabilistic Graphical BERT-GPT2 Transformer Model for Failure Analysis Triplet Generation
+### Big GCVAE: decision-making with adaptive transformer model for failure root cause analysis in semiconductor industry
 
 ![Complete worflow](https://github.com/FA4-0/Big-GCVAE/blob/main/complete_flow.png)
 
@@ -119,6 +119,17 @@ metrics.
 	is the most fuzzy with overlapping cluster of densities in t-SNE Embedding space.
 
 ## Citation
-- ```Accepted``` @ ```Journal of Intelligent Manufacturing (JIM)```: ```2024```
-
+ ```
+ @article{Ezukwoke2024,
+  author = {Ezukwoke, Kenneth and Hoayek, Anis and Batton-Hubert, Mireille and Boucher, Xavier and Gounet, Pascal and Adrian, J{\'e}r{\^o}me},
+  title = {Big GCVAE: decision-making with adaptive transformer model for failure root cause analysis in semiconductor industry},
+  journal = {Journal of Intelligent Manufacturing},
+  year = {2024},
+  month = apr,
+  day = {02},
+  issn = {1572-8145},
+  doi = {10.1007/s10845-024-02346-x},
+  url = {https://doi.org/10.1007/s10845-024-02346-x}
+}
+```
 
